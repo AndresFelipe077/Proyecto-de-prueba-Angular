@@ -1,0 +1,9 @@
+<h1>{{product.title |uppercase  | reverse}}</h1>
+<img [src]="product.image" alt="" width="200">
+<h1>{{product.price |currency}}</h1>
+<p>{{product.text |slice:0:10}}</p>
+<p>{{ today | date:'yyyy.MM.dd'}}</p>
+<p>{{ today | dateFormat:'PPPPpppp'}}</p>
+<p>{{ today | dateFormat:'yyyy'}}</p>
+
+<button (click)="viewDetail()"> vel el detalle</button>

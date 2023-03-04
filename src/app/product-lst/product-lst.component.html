@@ -1,0 +1,5 @@
+<app-header 
+[product]="product"
+(clickedProduct)="onClickedProduct($event)"
+ *ngFor="let product of products"
+ ></app-header>
