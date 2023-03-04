@@ -1,0 +1,41 @@
+<style type="text/css">
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  #global {
+    height: 500px;
+    width: 100%;
+    border: 1px solid rgb(55, 54, 54);
+    background: #3b3a3a;
+    overflow-y: scroll;
+  }
+
+  #mensajes {
+    height: auto;
+  }
+
+  .texto {
+    padding: 4px;
+    background: rgb(31, 30, 30);
+  }
+</style>
+
+<div id="global">
+  <div id="mensajes">
+    <div class="text-center texto">
+
+      <h1 class="mt-5">Api Json video 4</h1>
+
+      <div class="form-floating mb-3 text-dark">
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" [(ngModel)]="title"
+          (keydown.enter)="addTodo()">
+        <label for="floatingInput">Ingresa texto</label>
+      </div>
+
+      <app-todo (delete)="OnDeleteTodo($event)" [todo]="todo" *ngFor="let todo of todos">
+      </app-todo>
+
+    </div>
+  </div>
+</div>

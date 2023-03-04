@@ -1,4 +1,4 @@
-<div class="container text-center text-white bg-dark">
+<div class="container text-center text-white bg-dark rounded mt-3">
 
   <h1>Trabajos de Angular</h1>
 
@@ -8,7 +8,9 @@
 
 
   <button class="btn btn-success" (click)="changeTitle()">cambiar</button>
-  <div class="text-center m-3"> <h4>{{rockbanName}}</h4> </div>
+  <div class="text-center m-3">
+    <h4>{{rockbanName}}</h4>
+  </div>
   <input type="text" [(ngModel)]="rockbanName" (keydown.enter)="addRockBand()">
   <button class="btn btn-success mx-2" (click)="addRockBand()">Agregar</button>
   <button class="btn btn-danger mx-2" (click)="empty()">Borrar</button>
@@ -63,8 +65,8 @@
   <ul>
     <li *ngFor="let animal of animals">
       Nombre: {{ animal.name }}<br>
-      Raza:   {{ animal.raza }}<br>
-      Edad:   {{ animal.edad }}<br>
+      Raza: {{ animal.raza }}<br>
+      Edad: {{ animal.edad }}<br>
       <hr>
     </li>
   </ul>
@@ -83,6 +85,13 @@
 </div>
 
 
-<div>
-  <app-user-list></app-user-list>
+<div class="container bg-dark text-white rounded">
+  <div class="row">
+    <div class="col-sm-6">
+      <app-user-list></app-user-list>
+    </div>
+    <div class="col-sm-6">
+      <app-todo-list></app-todo-list>
+    </div>
+  </div>
 </div>
