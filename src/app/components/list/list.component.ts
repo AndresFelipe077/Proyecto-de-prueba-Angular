@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
-const fibonacci =(num:number):number=>{
-  if(num== 1 || num== 2){
+const fibonacci = (num: number): number => {
+  if (num == 1 || num == 2) {
     return 1;
   }
-  return fibonacci(num-1)+fibonacci(num-2);
+  return fibonacci(num - 1) + fibonacci(num - 2);
 };
 
 @Component({
@@ -18,30 +18,30 @@ export class ListComponent {
 
   users = [
     {
-  name: 'julian',
-  number: 4
+      name: 'julian',
+      number: 4
     },
     {
-  name: 'jhon',
-  number: 15
+      name: 'jhon',
+      number: 15
     },
   ]
-  addUser(){
+  addUser() {
     this.users.push({
-      name:this.name,
-      number:12
+      name: this.name,
+      number: 12
     });
   }
-    constructor(){
-  
-    }
-  
-    ngOnInit() {
-     
-    }
+  constructor() {
 
-calcfib(num:number){
-  console.log('fib');
-  return fibonacci(num);
-}
+  }
+
+  ngOnInit() {
+
+  }
+
+  calcfib(num: number) {
+    console.log('fib');
+    return fibonacci(num);
+  }
 }

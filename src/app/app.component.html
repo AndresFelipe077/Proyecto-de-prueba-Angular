@@ -1,52 +1,83 @@
-<!-- <h1>hola {{title}}</h1>
+<div class="container text-center text-white bg-dark">
+
+  <h1>Trabajos de Angular</h1>
+
+
+  <!-- <h1>hola {{title}}</h1> -->
 
 
 
-  <button (click)="changeTitle()">cambiar</button>
- <input type="text" [(ngModel)] = "rockbanName" (keydown.enter)="addRockBand()">{{rockbanName}}
- <button (click)="addRockBand()">add</button>
- <button (click)="empty()">delete</button>
+  <button class="btn btn-success" (click)="changeTitle()">cambiar</button>
+  <div class="text-center m-3"> <h4>{{rockbanName}}</h4> </div>
+  <input type="text" [(ngModel)]="rockbanName" (keydown.enter)="addRockBand()">
+  <button class="btn btn-success mx-2" (click)="addRockBand()">Agregar</button>
+  <button class="btn btn-danger mx-2" (click)="empty()">Borrar</button>
 
+  <hr>
 
+  <ul>
+    <li *ngIf="rockbans.length == 0">empty</li>
+    <li *ngFor="let rock of  rockbans; index as i">
+      {{rock}} {{i}}
+      <button class="btn btn-danger mx-2" (click)="deleteItem(i)">Eliminar</button>
+      <button class="btn btn-success mx-2" (click)="updateItem(i)">Actualizar</button>
+    </li>
 
- <ul>
-  <li  *ngIf="rockbans.length ==0" >empty</li>
-  <li *ngFor="let rock of  rockbans; index as i">
-    {{rock}} {{i}}
-    <button (click)="deleteItem(i)" >delete</button>
-    <button (click)="updateItem(i)" >update</button>
-  </li>
-  
-</ul> -->
+  </ul>
 
-<!-- <div *ngIf="rockbanName=='nicolas'">
-es nicolas
+  <hr>
+
+  <div *ngIf="rockbanName=='nicolas'">
+    es nicolas el mamerto
+  </div>
+  <div *ngIf="rockbanName=='julian'">
+    es julian
+  </div>
+
+  <div *ngIf="rockbanName=='camilo'">
+    es camilo
+  </div>
+
+  <div [ngSwitch]="rockbanName">
+    <p *ngSwitchCase="'nicolas'">es nicolas</p>
+    <p *ngSwitchCase="'julian'">es julian</p>
+    <p *ngSwitchCase="'camilo'">es camilo</p>
+    <p *ngSwitchDefault>no hace match</p>
+  </div>
+
+  <hr>
+
+  <!-- variable iteradora  -->
+  <h5>Hecho por Smith</h5>
+  <ul>
+    <li *ngFor="let user of users">
+      Nombre:{{user.name}}
+      Edad: {{user.age}}
+      Solters:{{user.isSingle}}
+      Avatar: <img [src]="user.avatar" alt="" width="100">
+    </li>
+  </ul>
+
+  <h5>Hecho por el pro de Andres Felipe Pizo Luligo, programador SENIOR 😎😎😎😎😎😎</h5>
+
+  <ul>
+    <li *ngFor="let animal of animals">
+      Nombre: {{ animal.name }}<br>
+      Raza:   {{ animal.raza }}<br>
+      Edad:   {{ animal.edad }}<br>
+      <hr>
+    </li>
+  </ul>
+
+  <h5>SIUUU</h5>
+
+  <hr>
+
+  <h1>Productos</h1>
+  <app-product-lst></app-product-lst>
+
+  <hr>
+
+  <app-list></app-list>
+
 </div>
-<div *ngIf="rockbanName=='julian'">
-  es julian
-</div>
-
-<div *ngIf="rockbanName=='camilo'">
-  es camilo
-</div> -->
-<!-- <div [ngSwitch]="rockbanName">
-  <p *ngSwitchCase="'nicolas'">es nicolas</p>
-  <p *ngSwitchCase="'julian'">es julian</p>
-   <p *ngSwitchCase="'camilo'">es camilo</p>
-   <p *ngSwitchDefault>n6 hace macht</p>
-</div>  -->
-
-<!-- variable iteradora  -->
-<!-- <ul>
-  <li *ngFor="let user of users">
-    Nombre:{{user.name}}
-    Edad: {{user.age}}
-    Solters:{{user.isSingle}}
-   Avatar: <img [src]="user.avatar" alt="" width="100">
-  </li>
-</ul>
-
-
-<app-product-lst></app-product-lst> -->
-
-<app-list></app-list>

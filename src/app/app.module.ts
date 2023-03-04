@@ -30,4 +30,6 @@ import { FibonacciPipe } from './pipes/fibonacci.pipe';
   providers: [],
   bootstrap: [AppComponent]
 })
+
+
 export class AppModule { }

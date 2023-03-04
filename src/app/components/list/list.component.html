@@ -1,9 +1,12 @@
-<input type="text"[(ngModel)]="name"(keydown.enter)=" addUser()">
+<div class="form-floating mb-3 text-dark">
+  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" [(ngModel)]="name" (keydown.enter)=" addUser()">
+  <label for="floatingInput">Ingresa usuario</label>
+</div>
+
 
 <ul>
-<li *ngFor="let user of users">
-{{user.name}} {{ user.number | fibonacci}}
-
-</li>
+  <li *ngFor="let user of users">
+    {{user.name}} {{ user.number | fibonacci}}
+  </li>
 
 </ul>
