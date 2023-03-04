@@ -1,0 +1,7 @@
+<input type="text" [(ngModel)]="limit"(keydown.enter)="fethcUsers()">
+<ul>
+  <li *ngFor="let user of users">
+{{user.email}}
+<img [src]="user.picture.large" alt="">
+  </li>
+</ul>

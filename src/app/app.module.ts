@@ -9,8 +9,11 @@ import { ProductLstComponent } from './product-lst/product-lst.component';
 import { ReversePipe } from './reverse.pipe';
 import { DateFormatPipe } from './date-format.pipe';
 import { ListComponent } from './components/list/list.component';
+import{HttpClientModule} from '@angular/common/http'
 
 import { FibonacciPipe } from './pipes/fibonacci.pipe';
+import { HighlightDirective } from './directives/highlight.directive';
+import { UserListComponent } from './component/user-list/user-list.component';
 
 
 @NgModule({
@@ -21,11 +24,16 @@ import { FibonacciPipe } from './pipes/fibonacci.pipe';
     ReversePipe,
     DateFormatPipe,
     ListComponent,
-    FibonacciPipe
+    FibonacciPipe,
+    HighlightDirective,
+    UserListComponent,
+   
+
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
