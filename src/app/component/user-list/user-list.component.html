@@ -1,7 +1,23 @@
-<input type="text" [(ngModel)]="limit"(keydown.enter)="fethcUsers()">
-<ul>
-  <li *ngFor="let user of users">
-{{user.email}}
-<img [src]="user.picture.large" alt="">
-  </li>
-</ul>
+<div class="container text-center mx-auto mt-5 bg-dark rounded m-3">
+
+  <h1 class="text-white"> Consumir Api rest </h1>
+
+  <div class="form-floating mb-3 text-dark mt-2">
+    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" [(ngModel)]="limit"
+      (keydown.enter)="fethcUsers()">
+    <label for="floatingInput">Ingresa cantidad de perfiles</label>
+  </div>
+
+
+  <ul class="mb-3" style="list-style-type: none;">
+    <li *ngFor="let user of users">
+      <div>
+        <img class="mx-auto rounded" [src]="user.picture.large" alt="">
+      </div>
+      <div class="m-3 h5 text-white">
+        {{user.email}}
+      </div>
+    </li>
+  </ul>
+
+</div>
