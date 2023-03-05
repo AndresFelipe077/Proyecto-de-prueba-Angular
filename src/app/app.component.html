@@ -10,9 +10,16 @@
     <div class="text-center m-3">
       <h4>{{rockbanName}}</h4>
     </div>
-    <input type="text" [(ngModel)]="rockbanName" (keydown.enter)="addRockBand()">
-    <button class="btn btn-success mx-2" (click)="addRockBand()">Agregar</button>
-    <button class="btn btn-danger mx-2" (click)="empty()">Borrar</button>
+    <div class="form-floating text-dark">
+      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
+        [(ngModel)]="rockbanName" (keydown.enter)="addRockBand()">
+      <label for="floatingInput">Escribe aquí</label>
+    </div>
+    <div class="m-2">
+      <button class="btn btn-success mx-2" (click)="addRockBand()">Agregar</button>
+      <button class="btn btn-danger mx-2" (click)="empty()">Borrar</button>
+    </div>
+
 
     <hr>
   </div>
