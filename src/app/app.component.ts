@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { secondsInMonth } from 'date-fns';
 import { Product } from './product/models/product.model';
 
+
 interface User {
   name: string;
   age: number;

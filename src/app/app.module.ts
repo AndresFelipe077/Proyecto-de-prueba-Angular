@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http'
 import { FibonacciPipe } from './pipes/fibonacci.pipe';
 import { HighlightDirective } from './directives/highlight.directive';
 import { UserListComponent } from './component/user-list/user-list.component';
+import { RouterModule } from '@angular/router';
 
 // import { TodoComponent } from '@todo/components/todo/todo.component'; 
 // import { TodoListComponent } from '@todo/components/todo-list/todo-list.component';
@@ -35,7 +36,8 @@ import { UserListComponent } from './component/user-list/user-list.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
