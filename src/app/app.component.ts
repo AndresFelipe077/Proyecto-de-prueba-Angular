@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { secondsInMonth } from 'date-fns';
-import { Product } from './products/components/product/models/product.model';
+import { Product } from '@products/models/product.model';
 
 
 @Component({
@@ -11,5 +11,4 @@ import { Product } from './products/components/product/models/product.model';
 })
 export class AppComponent {
   
-
 }

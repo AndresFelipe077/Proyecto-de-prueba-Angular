@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 interface User {
   name: string;
@@ -18,12 +18,17 @@ interface Animal{
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.css']
 })
-export class LayoutComponent {
+export class LayoutComponent implements OnInit {
 
   title = 'holanuevo';
   name = 'nicolas';
 
   rockbans: string[] = ['nirvana', 'los cabesones'];
+
+  ngOnInit()
+  {
+    //Code
+  }
 
   users: User[] = [
     {
