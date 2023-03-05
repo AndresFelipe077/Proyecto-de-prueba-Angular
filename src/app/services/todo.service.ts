@@ -3,9 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { Todo } from '../product/models/todo.model';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class TodoService {
 
   path = 'https://jsonplaceholder.typicode.com/todos';
