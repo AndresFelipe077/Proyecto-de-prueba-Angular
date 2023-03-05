@@ -25,9 +25,9 @@
     ],
 
     "paths": {
-      "@todo/*":["src/app/todo/*"],
-      "@core/*":["src/app/core/*"],
-      "@shared/*":["src/app/shared/*"]
+      "@todo/*":   ["src/app/todo/*"],
+      "@core/*":   ["src/app/core/*"],
+      "@shared/*": ["src/app/shared/*"],
     }
 
 

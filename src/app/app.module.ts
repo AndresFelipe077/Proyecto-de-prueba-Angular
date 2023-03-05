@@ -4,8 +4,8 @@ import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
-import { ProductComponent } from './product/product.component';
-import { ProductLstComponent } from './product-lst/product-lst.component';
+import { ProductComponent } from './products/components/product/product.component';
+import { ProductLstComponent } from './products/components/product-lst/product-lst.component';
 import { ReversePipe } from './reverse.pipe';
 import { DateFormatPipe } from './date-format.pipe';
 import { ListComponent } from './components/list/list.component';
@@ -15,9 +15,6 @@ import { FibonacciPipe } from './pipes/fibonacci.pipe';
 import { HighlightDirective } from './directives/highlight.directive';
 import { UserListComponent } from './component/user-list/user-list.component';
 import { RouterModule } from '@angular/router';
-
-// import { TodoComponent } from '@todo/components/todo/todo.component'; 
-// import { TodoListComponent } from '@todo/components/todo-list/todo-list.component';
 
 @NgModule({
   declarations: [
@@ -30,8 +27,6 @@ import { RouterModule } from '@angular/router';
     FibonacciPipe,
     HighlightDirective,
     UserListComponent,
-    // TodoComponent,
-    // TodoListComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { Todo } from '../product/models/todo.model';
+import { Todo } from '../products/components/product/models/todo.model';
 
 @Injectable()
 export class TodoService {

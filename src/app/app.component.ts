@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { secondsInMonth } from 'date-fns';
-import { Product } from './product/models/product.model';
+import { Product } from './products/components/product/models/product.model';
 
 
 interface User {
