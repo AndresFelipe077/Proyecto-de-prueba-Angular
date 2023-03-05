@@ -8,12 +8,12 @@ import { ProductComponent } from './products/components/product/product.componen
 import { ProductLstComponent } from './products/components/product-lst/product-lst.component';
 import { ReversePipe } from './reverse.pipe';
 import { DateFormatPipe } from './date-format.pipe';
-import { ListComponent } from './components/list/list.component';
+import { ListComponent } from './basic/components/list/list.component';
 import { HttpClientModule } from '@angular/common/http'
 
-import { FibonacciPipe } from './pipes/fibonacci.pipe';
-import { HighlightDirective } from './directives/highlight.directive';
-import { UserListComponent } from './component/user-list/user-list.component';
+import { FibonacciPipe } from './shared/pipes/fibonacci.pipe';
+import { HighlightDirective } from './shared/directives/highlight.directive';
+import { UserListComponent } from './users/components/user-list/user-list.component';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
