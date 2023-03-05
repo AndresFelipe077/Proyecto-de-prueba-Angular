@@ -66,7 +66,7 @@ export class AppComponent {
   }
   
   addRockBand() {
-    this.rockbans.push(this.rockbanName);
+    this.rockbans.unshift(this.rockbanName);
     this.rockbanName = '';
   }
 
@@ -75,7 +75,7 @@ export class AppComponent {
   }
 
   deleteItem(index: number) {
-    this.rockbans.splice(index, 1);
+    this.rockbans.splice(index, 1);//index -> para el indice del array, 1 -> cantidad de datos a borrar
   }
 
   updateItem(index: number) {

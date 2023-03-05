@@ -35,7 +35,8 @@ export class TodoListComponent implements OnInit {
     this.todoService.createTodo(newTodo)
       .subscribe(
         todo => {
-          console.log(todo);
+          //console.log(todo);
+          this.todos.unshift(todo);//unshift sirve para agregar al inicio del array, push al final
         },
         error => {
           console.log(error);
@@ -47,8 +48,24 @@ export class TodoListComponent implements OnInit {
 
   }
 
-  OnDeleteTodo(todoId: string) {
-    console.log(todoId);
+  onUpdateTodo(todo: Todo, index: number)
+  {
+    this.todoService.updateTodo(todo)
+    .subscribe( 
+      todoUpdated => {
+        this.todos[index] = todoUpdated;
+      });
+  }
+
+  onDeleteTodo(todoId: string, index: number) {
+      //console.log(todoId);
+      this.todoService.deleteTodo(todoId)
+      .subscribe( 
+        rta =>{
+          //alert('se esfumo ☺')
+          // console.log(rta);
+          this.todos.splice(index, 1);
+        });
   }
 
 }

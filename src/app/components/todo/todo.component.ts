@@ -11,6 +11,7 @@ export class TodoComponent implements OnInit{
 
   @Input() todo!: Todo;
   @Output() delete = new EventEmitter<string>();
+  @Output() update = new EventEmitter<Todo>();
 
   constructor() {  }
 
@@ -18,9 +19,13 @@ export class TodoComponent implements OnInit{
       
   }
 
+  updateTodo()
+  {
+    this.update.emit(this.todo);
+  }
+
   deleteTodo()
   {
     this.delete.emit(this.todo.id);
   }
-
 }

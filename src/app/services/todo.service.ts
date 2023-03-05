@@ -25,4 +25,15 @@ export class TodoService {
     return this.http.post<Todo>(this.path, todo);
   }
 
+  updateTodo(todo: Todo)
+  {
+    const url = `${this.path}/${todo.id}`
+    return this.http.put<Todo>(url, todo);
+  }
+
+  deleteTodo(todoId: string)
+    {
+      const url = `${this.path}/${todoId}`
+      return this.http.delete(url);
+    }
 }
