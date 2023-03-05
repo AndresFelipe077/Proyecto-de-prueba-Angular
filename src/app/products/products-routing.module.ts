@@ -5,7 +5,7 @@ import { ProductLstComponent } from './components/product-lst/product-lst.compon
 
 const routes: Routes = [
   {
-    path: 'all',
+    path: '',
     component: ProductLstComponent
   }
 ];

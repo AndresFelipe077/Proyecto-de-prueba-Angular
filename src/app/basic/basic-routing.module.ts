@@ -6,6 +6,11 @@ import { ListComponent } from './components/list/list.component';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'layout',
+    pathMatch: 'full'
+  },
+  {
     path: 'layout',
     component: LayoutComponent
   },
