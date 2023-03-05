@@ -14,9 +14,14 @@ import{HttpClientModule} from '@angular/common/http'
 import { FibonacciPipe } from './pipes/fibonacci.pipe';
 import { HighlightDirective } from './directives/highlight.directive';
 import { UserListComponent } from './component/user-list/user-list.component';
+<<<<<<< HEAD
 import { TodoComponent } from '@todo/components/todo/todo.component'; 
 import { TodoListComponent } from '@todo/components/todo-list/todo-list.component';
 
+=======
+import { TodoComponent } from './components/todo/todo.component';
+import { TodoListComponent } from './components/todo-list/todo-list.component';
+>>>>>>> 4fcdaa7a6b4841fc2e330941974e1fb280597039
 
 
 @NgModule({
@@ -31,8 +36,12 @@ import { TodoListComponent } from '@todo/components/todo-list/todo-list.componen
     HighlightDirective,
     UserListComponent,
     TodoComponent,
+<<<<<<< HEAD
     TodoListComponent
   
+=======
+    TodoListComponent,
+>>>>>>> 4fcdaa7a6b4841fc2e330941974e1fb280597039
    
 
   ],

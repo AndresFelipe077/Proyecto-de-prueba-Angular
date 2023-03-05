@@ -1,23 +1,52 @@
-<div class="container text-center mx-auto mt-5 bg-dark rounded m-3">
+<style type="text/css">
+  ::-webkit-scrollbar {
+    display: none;
+  }
 
-  <h1 class="text-white"> Consumir Api rest </h1>
+  #global {
+    height: 500px;
+    width: 100%;
+    border: 1px solid rgb(55, 54, 54);
+    background: #3b3a3a;
+    overflow-y: scroll;
+    border-radius: 10px;
+  }
 
-  <div class="form-floating mb-3 text-dark mt-2">
-    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" [(ngModel)]="limit"
-      (keydown.enter)="fethcUsers()">
-    <label for="floatingInput">Ingresa cantidad de perfiles</label>
+  #mensajes {
+    height: auto;
+  }
+
+  .texto {
+    padding: 4px;
+    background: rgb(31, 30, 30);
+  }
+</style>
+
+<div id="global" class="bg-dark">
+  <div id="mensajes">
+    <div class="text-center mx-auto bg-dark rounded m-2 texto" data-aos="fade-up">
+
+      <h1 class="mt-5"> Consumir Api rest </h1>
+    
+      <div class="form-floating text-dark mt-2">
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" [(ngModel)]="limit"
+          (keydown.enter)="fethcUsers()">
+        <label for="floatingInput">Ingresa cantidad de perfiles</label>
+      </div>
+    
+    
+      <ul class="mb-3" style="list-style-type: none;">
+        <li *ngFor="let user of users">
+          <div>
+            <img class="mx-auto rounded" [src]="user.picture.large" alt="">
+          </div>
+          <div class="m-3 h5 text-white">
+            {{user.email}}
+          </div>
+        </li>
+      </ul>
+    
+    </div>
   </div>
-
-
-  <ul class="mb-3" style="list-style-type: none;">
-    <li *ngFor="let user of users">
-      <div>
-        <img class="mx-auto rounded" [src]="user.picture.large" alt="">
-      </div>
-      <div class="m-3 h5 text-white">
-        {{user.email}}
-      </div>
-    </li>
-  </ul>
-
 </div>
+
