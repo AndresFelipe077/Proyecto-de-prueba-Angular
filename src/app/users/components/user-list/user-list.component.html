@@ -4,7 +4,7 @@
   }
 
   #global {
-    height: 500px;
+    height: 1000px;
     width: 100%;
     border: 1px solid rgb(55, 54, 54);
     background: #3b3a3a;
@@ -22,7 +22,7 @@
   }
 </style>
 
-<div id="global" class="bg-dark">
+<div id="global" class="bg-dark text-center m-5">
   <div id="mensajes">
     <div class="text-center mx-auto bg-dark rounded m-2 texto" data-aos="fade-up">
 
@@ -33,18 +33,26 @@
           (keydown.enter)="fethcUsers()">
         <label for="floatingInput">Ingresa cantidad de perfiles</label>
       </div>
-    
-    
-      <ul class="mb-3" style="list-style-type: none;">
-        <li *ngFor="let user of users">
-          <div>
-            <img class="mx-auto rounded" [src]="user.picture.large" alt="">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md">
+            <ul class="mb-3" style="list-style-type: none;">
+              <li *ngFor="let user of users">
+                <div>
+                  <img class="mx-auto mt-3 rounded" [src]="user.picture.large" alt="images" width="300px">
+                </div>
+                <div class="m-3 h5 text-white">
+                  {{user.email}}
+                </div>
+              </li>
+            </ul>
           </div>
-          <div class="m-3 h5 text-white">
-            {{user.email}}
-          </div>
-        </li>
-      </ul>
+        </div>
+      </div>
+
+
+
     
     </div>
   </div>
