@@ -1,4 +1,4 @@
-<div class="card text-dark m-3" data-aos="fade-up">
+<div class="card text-dark m-3 text-center" data-aos="fade-up">
   <div class="card-body">
     <h5 class="card-title">{{product.title | uppercase | reverse}}</h5>
     <img [src]="product.image" alt="" width="200">
@@ -7,8 +7,8 @@
     <p>{{ today | date:'yyyy.MM.dd'}}</p>
     <p>{{ today | dateFormat:'PPPPpppp'}}</p>
     <p>{{ today | dateFormat:'yyyy'}}</p>
-    <button type="button" class="btn btn-success mx-2" (click)="viewDetail()">vel en detalle</button>
-    <a [routerLink]="['/products',product.id]">ver detalle con routerLink</a>
+    <!-- <button type="button"  (click)="viewDetail()">vel en detalle</button> -->
+    <a class="btn btn-success mx-2" [routerLink]="['/products',product.id]">ver detalle</a>
   </div>
 </div>
 

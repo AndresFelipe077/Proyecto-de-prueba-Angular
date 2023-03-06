@@ -25,7 +25,7 @@ export class ProductLstComponent implements OnInit {
 
   onClickedProduct(id: number) {
     console.log('clicked', id);
-    this.router.navigate(['/products',id]);
+    this.router.navigate(['/products',id]);// nos ayuda a navegar en la pagina, ira a por ejemplo products/1
   }
 
 }

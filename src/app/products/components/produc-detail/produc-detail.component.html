@@ -1,10 +1,10 @@
-<div class="container text-center mx-auto bg-dark rounded text-white p-3" *ngIf="product; else elseBlock">
+<div class="container text-center mx-auto bg-dark rounded text-white p-3" *ngIf="product; else nofound">
   <h1 class="m-2">{{product.title}}</h1>
-  <img class="rounded" [src]="product.image" [alt]="product.title">
+  <img class="rounded" [src]="product.image" [alt]="product.title" width="300px">
   <p class="h4 m-2">{{product.text}}</p>
 </div>
 
-<ng-template #elseBlock> 
+<ng-template #nofound> 
   <h1 class="text-center m-3">No se encontro el resultado 😥</h1>
 </ng-template>
 
