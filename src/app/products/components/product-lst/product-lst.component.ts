@@ -19,13 +19,13 @@ export class ProductLstComponent implements OnInit {
     private router: Router
   ) { }
     
-  ngOnInit() { 
+  ngOnInit() { //componente para cargar por primera vez
     this.products= this.productService.getAllProducts();
   }
 
   onClickedProduct(id: number) {
     console.log('clicked', id);
-    this.router.navigate(['/products',id]);
+    this.router.navigate(['/products',id]);// nos ayuda a navegar en la pagina, ira a por ejemplo products/1
   }
 
 }

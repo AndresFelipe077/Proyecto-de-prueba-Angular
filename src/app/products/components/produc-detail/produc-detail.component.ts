@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute,Params } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router'; // Activar routes
 
 import { Product } from '@products/models/product.model';
 import { ProductService } from '@products/services/product.service';
@@ -11,23 +11,22 @@ import { ProductService } from '@products/services/product.service';
 })
 export class ProducDetailComponent {
 
-product!: Product;
-  
+  product!: Product;
 
- constructor(
-  private activateRoute:ActivatedRoute,
-  private productService:ProductService
- ){
 
- 
- }
+  constructor(
+    private activateRoute: ActivatedRoute,
+    private productService: ProductService
+  ) {
 
- ngOnInit(){
-  this.activateRoute.params
-  .subscribe((params:Params)=>
-    {
-      const id= params['id'];
-      this.product = this.productService.getProduct(id);
-    });
- }
+
+  }
+
+  ngOnInit() { // cuando se renderice en el navegador
+    this.activateRoute.params
+      .subscribe((params: Params) => {
+        const id = params['id'];
+        this.product = this.productService.getProduct(id);
+      });
+  }
 }
