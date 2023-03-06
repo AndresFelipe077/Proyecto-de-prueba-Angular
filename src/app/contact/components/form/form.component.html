@@ -1,0 +1,6 @@
+<input type="email" [formControl]="emailField">
+<button [disabled]=" emailField.invalid">enviar</button>
+<div *ngIf="emailField.errors && emailField.dirty">
+  <p>El campo es obligatorio</p>
+  <p>El campo debe de tener 10 caracteres </p>
+</div>

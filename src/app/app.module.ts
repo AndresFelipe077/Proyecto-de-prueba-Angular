@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { Page404Component } from './page404/page404.component';
 
 
+
 // import { ReversePipe } from './shared/pipes/reverse.pipe';
 // import { DateFormatPipe } from '@shared/pipes/date-format.pipe'; 
 
@@ -21,6 +22,7 @@ import { Page404Component } from './page404/page404.component';
   declarations: [
     AppComponent,
     Page404Component,
+  
   ],
   imports: [
     BrowserModule,
