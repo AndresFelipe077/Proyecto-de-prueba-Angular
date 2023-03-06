@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { User } from '../products/components/product/models/user.model';
+import { User } from '../models/user.model'; 
 import { map } from 'rxjs/operators';
 import { Pipe } from '@angular/core';
 
@@ -8,9 +8,7 @@ interface RespondsUsers{
   results:User[];
   info:any;
 }
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class UsersService {
 
   constructor(

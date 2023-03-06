@@ -1,15 +1,44 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule,PreloadAllModules } from '@angular/router';
+
+import { Page404Component } from './page404/page404.component';
 
 const routes: Routes = [
+
   {
-    path: '/todos',
+    path:'',
+    redirectTo:'products',
+    pathMatch:'full'
+  },
+  
+  {
+    path: 'todos',
     loadChildren: () => import('./todo/todo.module').then(m => m.TodoModule)
+  },
+  {
+    path: 'basic',
+    loadChildren: () => import('./basic/basic.module').then(m => m.BasicModule)
+  },
+  {
+    path: 'products',
+    loadChildren: () => import('./products/products.module').then(m => m.ProductsModule)
+  },
+
+  {
+    path: 'users',
+    loadChildren: () => import('./users/users.module').then(m => m.UsersModule)
+  },
+  {
+    path:'**',
+    component:Page404Component
   }
+
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{
+    preloadingStrategy:PreloadAllModules
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

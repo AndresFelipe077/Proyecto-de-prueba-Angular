@@ -1,38 +1,32 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
-
-import { AppComponent } from './app.component';
-import { ProductComponent } from './products/components/product/product.component';
-import { ProductLstComponent } from './products/components/product-lst/product-lst.component';
-import { ReversePipe } from './reverse.pipe';
-import { DateFormatPipe } from './date-format.pipe';
-import { ListComponent } from './components/list/list.component';
 import { HttpClientModule } from '@angular/common/http'
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { Page404Component } from './page404/page404.component';
 
-import { FibonacciPipe } from './pipes/fibonacci.pipe';
-import { HighlightDirective } from './directives/highlight.directive';
-import { UserListComponent } from './component/user-list/user-list.component';
-import { RouterModule } from '@angular/router';
+
+// import { ReversePipe } from './shared/pipes/reverse.pipe';
+// import { DateFormatPipe } from '@shared/pipes/date-format.pipe'; 
+
+
+
+// import { FibonacciPipe } from '@shared/pipes/fibonacci.pipe'; 
+// import { HighlightDirective } from './shared/directives/highlight.directive';
+
+// import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent,
-    ProductLstComponent,
-    ReversePipe,
-    DateFormatPipe,
-    ListComponent,
-    FibonacciPipe,
-    HighlightDirective,
-    UserListComponent,
+    Page404Component,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    RouterModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

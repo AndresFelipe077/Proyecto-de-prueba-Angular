@@ -1,131 +1,15 @@
-<div class="container text-center text-white bg-dark rounded mt-3">
+<nav>
+<ul>
+  <li><a routerLink="/basic">Basic</a></li>
+  <li><a routerLink="/users">User</a></li>
+  <li><a routerLink="/products">Product</a></li>
+  <li><a routerLink="/todos">Todos</a></li>
+ 
+  
+</ul>
 
-  <h1 data-aos="fade-up">Trabajos de Angular</h1>
-
-
-  <!-- <h1>hola {{title}}</h1> -->
-
-  <div data-aos="fade-right">
-    <button class="btn btn-success" (click)="changeTitle()">cambiar</button>
-    <div class="text-center m-3">
-      <h4>{{rockbanName}}</h4>
-    </div>
-    <div class="form-floating text-dark">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
-        [(ngModel)]="rockbanName" (keydown.enter)="addRockBand()">
-      <label for="floatingInput">Escribe aquí</label>
-    </div>
-    <div class="m-2">
-      <button class="btn btn-success mx-2" (click)="addRockBand()">Agregar</button>
-      <button class="btn btn-danger mx-2" (click)="empty()">Borrar</button>
-    </div>
-
-
-    <hr>
-  </div>
-
-  <div data-aos="fade-left">
-    <ul>
-      <li *ngIf="rockbans.length == 0">empty</li>
-      <li *ngFor="let rock of  rockbans; index as i">
-        {{rock}} {{i}}
-        <button class="btn btn-danger mx-2" (click)="deleteItem(i)">Eliminar</button>
-        <button class="btn btn-success mx-2" (click)="updateItem(i)">Actualizar</button>
-      </li>
-    </ul>
-    <hr>
-  </div>
-
-
-  <div data-aos="fade-down">
-    <div *ngIf="rockbanName=='nicolas'">
-      es nicolas el mamerto
-    </div>
-    <div *ngIf="rockbanName=='julian'">
-      es julian
-    </div>
-
-    <div *ngIf="rockbanName=='camilo'">
-      es camilo
-    </div>
-
-    <div [ngSwitch]="rockbanName">
-      <p *ngSwitchCase="'nicolas'">es nicolas</p>
-      <p *ngSwitchCase="'julian'">es julian</p>
-      <p *ngSwitchCase="'camilo'">es camilo</p>
-      <p *ngSwitchDefault>no hace match</p>
-    </div>
-
-    <hr>
-  </div>
+</nav>
 
 
 
-  <div data-aos="fade-up-right">
-    <!-- variable iteradora  -->
-    <h5>Hecho por Smith</h5>
-    <ul>
-      <li *ngFor="let user of users">
-        Nombre:{{user.name}}
-        Edad: {{user.age}}
-        Solters:{{user.isSingle}}
-        Avatar: <img [src]="user.avatar" alt="" width="100">
-      </li>
-    </ul>
-
-    <h5>Hecho por el pro de Andres Felipe Pizo Luligo, programador SENIOR 😎😎😎😎😎😎</h5>
-
-    <ul>
-      <li *ngFor="let animal of animals">
-        Nombre: {{ animal.name }}<br>
-        Raza: {{ animal.raza }}<br>
-        Edad: {{ animal.edad }}<br>
-        <hr>
-      </li>
-    </ul>
-
-    <h5>SIUUU</h5>
-
-    <hr>
-  </div>
-
-  <div data-aos="fade-up-left">
-    <h1>Productos</h1>
-
-
-    <div class="container">
-      <div class="row">
-        <div class="col-md">
-          <app-product-lst></app-product-lst>
-        </div>
-        <div class="col-md">
-          <app-product-lst></app-product-lst>
-        </div>
-        <div class="col-md">
-          <app-product-lst></app-product-lst>
-        </div>
-      </div>
-    </div>
-
-    <hr>
-  </div>
-
-  <div data-aos="fade-down-right">
-    <app-list></app-list>
-  </div>
-
-</div>
-
-<div class="container bg-dark text-white rounded">
-  <div class="row">
-    <div class="col-sm-6">
-      <app-user-list></app-user-list>
-    </div>
-    <div class="col-sm-6">
-      <router-outlet></router-outlet>
-      
-    </div>
-  </div>
-
-</div>
-
+<router-outlet></router-outlet>

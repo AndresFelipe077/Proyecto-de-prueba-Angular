@@ -8,5 +8,6 @@
     <p>{{ today | dateFormat:'PPPPpppp'}}</p>
     <p>{{ today | dateFormat:'yyyy'}}</p>
     <button type="button" class="btn btn-success mx-2" (click)="viewDetail()">vel en detalle</button>
+    <a [routerLink]="['/products',product.id]">ver detalle con routerLink</a>
   </div>
 </div>
