@@ -12,5 +12,4 @@ import { Product } from './products/models/product.model';
 })
 export class AppComponent {
   
-
 }

@@ -1,7 +1,16 @@
-<input type="text" [(ngModel)]="title" (keydown.enter)="addTodo()">
+<div class="container text-center mx-auto bg-dark rounded ">
+  <div class="form-floating p-1 text-dark">
+    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" [(ngModel)]="title" (keydown.enter)="addTodo()">
+    <label for="floatingInput">Escribe para agregar al listado</label>
+  </div>
 
-<app-todo
-  (delete)="onDeleteTodo($event, i)"
-  (update)="onUpdateTodo($event, i)"
-  [todo]="todo" *ngFor="let todo of todos; index as i">
-</app-todo>
+  <div class="card text-white bg-dark">
+    <app-todo 
+   (delete)="onDeleteTodo($event, i)"
+   (update)="onUpdateTodo($event, i)" [todo]="todo"
+    *ngFor="let todo of todos; index as i">
+  </app-todo>
+  </div>
+  
+
+</div>

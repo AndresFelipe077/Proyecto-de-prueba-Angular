@@ -8,6 +8,7 @@ import { ProductService } from '@products/services/product.service';
   templateUrl: './product-lst.component.html',
   styleUrls: ['./product-lst.component.css']
 })
+
 export class ProductLstComponent implements OnInit {
 
   products: Product[] = [];

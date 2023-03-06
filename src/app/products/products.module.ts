@@ -8,19 +8,20 @@ import { SharedModule } from '@shared/shared.module';
 import { ProducDetailComponent } from './components/produc-detail/produc-detail.component';
 import { ProductService } from './services/product.service';
 
+
 @NgModule({
-  declarations: [
-    ProductComponent,
-    ProductLstComponent,
-    ProducDetailComponent
-  ],
-  imports: [
-    CommonModule,
-    ProductsRoutingModule,
-    SharedModule 
-  ],
-  providers:[
-    ProductService ,
-  ]
+    declarations: [
+        ProductComponent,
+        ProductLstComponent,
+        ProducDetailComponent
+    ],
+    providers: [
+        ProductService,
+    ],
+    imports: [
+        CommonModule,
+        ProductsRoutingModule,
+        SharedModule
+    ]
 })
 export class ProductsModule { }
