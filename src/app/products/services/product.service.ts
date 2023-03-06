@@ -28,7 +28,6 @@ export class ProductService {
       image: 'assets/images/1900x920-8-beneficios-de-usar-imagenes-en-nuestros-sitios-web.webp'
     },
 
-
   ];
 
   constructor() { }
@@ -37,7 +36,9 @@ export class ProductService {
     return this.products;
   }
 
-  getProduct(productId:number){
-    return this.products.find(product=>product.id==productId);
+  getProduct(productId: string){
+    const productID = parseInt(productId);// Aqui lo cambie, para experimentar parseando de string a entero para el productId
+    return this.products.find(product => product.id == productID);
   }
+
 }

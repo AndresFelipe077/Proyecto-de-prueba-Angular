@@ -4,14 +4,14 @@ import { ProductLstComponent } from './components/product-lst/product-lst.compon
 import { ProducDetailComponent } from './components/produc-detail/produc-detail.component';
 
 const routes: Routes = [
-{
-  path:'',
- component:ProductLstComponent 
-},
-{
-  path:':id',
- component:ProducDetailComponent
-}
+  {
+    path: '',
+    component: ProductLstComponent
+  },
+  {
+    path: ':id',// parametro de entrada ID || van dos puntos por la ruta que se definio
+    component: ProducDetailComponent // Renderizar componente
+  }
 
 ];
 

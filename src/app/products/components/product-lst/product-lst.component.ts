@@ -19,7 +19,7 @@ export class ProductLstComponent implements OnInit {
     private router: Router
   ) { }
     
-  ngOnInit() { 
+  ngOnInit() { //componente para cargar por primera vez
     this.products= this.productService.getAllProducts();
   }
 
