@@ -1,5 +1,9 @@
 import { Component,OnInit } from '@angular/core';
-import { FormControl,Validators } from '@angular/forms';
+import { FormControl,Validators,AbstractControl } from '@angular/forms';
+
+import { debounceTime } from 'rxjs';
+
+import { MyValidators } from 'src/app/utils/validators';
 
 @Component({
   selector: 'app-form',
@@ -9,16 +13,36 @@ import { FormControl,Validators } from '@angular/forms';
 export class FormComponent implements OnInit{
 
   emailField:FormControl;
-
+  nameField: FormControl;
 
   constructor(){
-    const validations =[Validators.minLength(10),Validators.required]
-    this.emailField=new FormControl('',validations);
-    this.emailField.valueChanges
-    .subscribe(value=>{
-      console.log(this.emailField.valid,value);
-    });
-  }
+   
+    this.emailField=new FormControl('', [
+    Validators.minLength(10),
+    Validators.required,
+    
+  
+  ]);
+  this.emailField.valueChanges
+  .pipe(
+    debounceTime(350),
+  )
+  .subscribe(value=>{
+    console.log(this.emailField.valid,value);
+})
+this. nameField=new FormControl('', [
+  Validators.required,
+  MyValidators.isSmith
+  
+
+]);
+
+
+};
 
   ngOnInit(){}
+
+  getValue(){
+    console.log(this.nameField);
+  }
 }

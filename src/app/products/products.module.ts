@@ -7,21 +7,30 @@ import { ProductLstComponent } from './components/product-lst/product-lst.compon
 import { SharedModule } from '@shared/shared.module';
 import { ProducDetailComponent } from './components/produc-detail/produc-detail.component';
 import { ProductService } from './services/product.service';
+import { ProductFormComponent } from './components/product-form/product-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
     declarations: [
         ProductComponent,
         ProductLstComponent,
-        ProducDetailComponent
+        ProducDetailComponent,
+        ProductFormComponent
+        
+
+        
     ],
-    providers: [
-        ProductService,
-    ],
+
     imports: [
         CommonModule,
         ProductsRoutingModule,
-        SharedModule
+        SharedModule,
+        ReactiveFormsModule 
+    ],
+    providers: [
+        ProductService,
     ]
+   
 })
 export class ProductsModule { }
