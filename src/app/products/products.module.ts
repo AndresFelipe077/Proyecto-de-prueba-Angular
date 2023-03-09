@@ -18,9 +18,6 @@ import { MaterialModule } from '@material/material.module';
         ProductLstComponent,
         ProducDetailComponent,
         ProductFormComponent
-        
-
-        
     ],
 
     imports: [
