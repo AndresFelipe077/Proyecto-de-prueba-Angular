@@ -17,9 +17,6 @@ import { ReactiveFormsModule } from '@angular/forms';
         ProductLstComponent,
         ProducDetailComponent,
         ProductFormComponent
-        
-
-        
     ],
 
     imports: [

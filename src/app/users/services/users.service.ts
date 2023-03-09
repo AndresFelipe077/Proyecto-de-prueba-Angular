@@ -8,7 +8,7 @@ interface RespondsUsers{
   results:User[];
   info:any;
 }
-@Injectable()
+@Injectable() // injetable solo para users
 export class UsersService {
 
   constructor(
