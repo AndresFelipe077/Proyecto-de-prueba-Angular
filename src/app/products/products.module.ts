@@ -9,6 +9,7 @@ import { ProducDetailComponent } from './components/produc-detail/produc-detail.
 import { ProductService } from './services/product.service';
 import { ProductFormComponent } from './components/product-form/product-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MaterialModule } from '@material/material.module';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { ReactiveFormsModule } from '@angular/forms';
         CommonModule,
         ProductsRoutingModule,
         SharedModule,
-        ReactiveFormsModule 
+        ReactiveFormsModule,
+        MaterialModule 
     ],
     providers: [
         ProductService,

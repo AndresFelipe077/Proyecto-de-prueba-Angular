@@ -1,15 +1,29 @@
-<div class="card text-dark m-3 text-center" data-aos="fade-up">
-  <div class="card-body">
-    <h5 class="card-title">{{product.title | uppercase | reverse}}</h5>
-    <img [src]="product.image" alt="" width="200">
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{product.title| uppercase | reverse}}</mat-card-title>
+  </mat-card-header>
+  <img [src]="product.image" mat-card-image [alt]="product.title" width="200">
+<mat-card-content>
+   <h5 class="card-title">{{product.title | uppercase | reverse}}</h5>
+   
     <p class="h3">{{product.price | currency}}</p>
     <p class="card-text">{{product.text |slice:0:15}}</p>
     <p>{{ today | date:'yyyy.MM.dd'}}</p>
     <p>{{ today | dateFormat:'PPPPpppp'}}</p>
     <p>{{ today | dateFormat:'yyyy'}}</p>
+
+</mat-card-content>
+<mat-card-actions>
+  <div class="card text-dark m-3 text-center" data-aos="fade-up">
+  <div class="card-body">
     <!-- <button type="button"  (click)="viewDetail()">vel en detalle</button> -->
-    <a class="btn btn-success mx-2" [routerLink]="['/products',product.id]">ver detalle</a>
+    <a mat-raised-button color="warn" [routerLink]="['/products',product.id]">ver detalle</a>
   </div>
 </div>
+</mat-card-actions>
+
+</mat-card>
+
+
 
 
